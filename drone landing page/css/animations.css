@@ -26,7 +26,14 @@ transform:translateX(-50%);
 }
 
 }
-
+@keyframes zoomMap{
+  from{
+    transform: scale(1);
+  }
+  to{
+    transform: scale(1.1);
+  }
+}
 @keyframes fadeUp{
 
 0%{

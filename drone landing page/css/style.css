@@ -199,9 +199,6 @@ font-size:14px;
 
 /* EXPLORE */
 
-/* ============================= */
-/* EXPLORE FIELD SECTION */
-/* ============================= */
 
 .explore-field{
 background:#172d13;
@@ -215,16 +212,12 @@ color:#6bb77b;
 margin-bottom:60px;
 }
 
-/* Layout */
-
 .explore-container{
 display:flex;
 align-items:center;
 gap:60px;
 flex-wrap:wrap;
 }
-
-/* Image */
 
 .explore-image{
 flex:1;
@@ -235,8 +228,6 @@ width:100%;
 border-radius:12px;
 box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
-
-/* Content */
 
 .explore-content{
 flex:1;
@@ -255,8 +246,6 @@ margin-bottom:30px;
 color:#ddd;
 }
 
-/* Button */
-
 .explore-btn{
 background:#6bb77b;
 padding:12px 25px;
@@ -270,8 +259,65 @@ transition:0.3s;
 .explore-btn:hover{
 background:#92a332;
 }
+.field-map{
+  width:100%;
+  max-width:600px;
+  animation: zoomMap 8s ease-in-out infinite alternate;
+}
 
 
+/* Demo Field Page */
+
+.demo-field{
+padding:80px 10%;
+background:#172d13;
+color:white;
+text-align:center;
+}
+
+.demo-note{
+color:#f5c542;
+margin-bottom:40px;
+}
+
+.field-container{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:60px;
+flex-wrap:wrap;
+}
+
+.field-map img{
+width:500px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.field-info{
+max-width:400px;
+text-align:left;
+}
+
+.field-info h3{
+color:#6bb77b;
+margin-top:20px;
+}
+
+.signup-btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:#6bb77b;
+color:white;
+text-decoration:none;
+border-radius:6px;
+transition:0.3s;
+}
+
+.signup-btn:hover{
+background:#92a332;
+}
 /* DASHBOARD */
 
 .dashboard{
@@ -298,14 +344,170 @@ margin-top:30px;
 color:#6bb77b;
 font-size:28px;
 }
-/* contact  */
-.contact{
 
-padding:80px 10%;
+
+/* Dashboard Preview Section */
+
+.dashboard-preview{
+padding:100px 10%;
+background:#0f1f0d;
 text-align:center;
-background:#f5f8f4;
-
+color:white;
 }
+
+.dashboard-preview h2{
+font-size:36px;
+margin-bottom:15px;
+color:#92a332;
+}
+
+.dashboard-preview p{
+max-width:700px;
+margin:auto;
+margin-bottom:50px;
+color:#dcdcdc;
+line-height:1.6;
+}
+
+.dashboard-image{
+display:flex;
+justify-content:center;
+}
+
+.dashboard-image img{
+width:900px;
+max-width:100%;
+border-radius:15px;
+box-shadow:0 20px 40px rgba(0,0,0,0.5);
+transition:transform 0.4s ease;
+}
+
+.dashboard-image img{
+animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+0%{ transform: translateY(0px); }
+50%{ transform: translateY(-10px); }
+100%{ transform: translateY(0px); }
+}
+
+/* Hover animation */
+
+.dashboard-image img:hover{
+transform:scale(1.05);
+}
+/* Statistics Section */
+
+.stats{
+padding:80px 10%;
+background:#172d13;
+text-align:center;
+color:white;
+}
+
+.stats h2{
+font-size:36px;
+margin-bottom:50px;
+color:#92a332;
+}
+
+/* Horizontal layout */
+
+/* Statistics Section */
+
+.stats{
+padding:80px 10%;
+background:#172d13;
+text-align:center;
+color:white;
+}
+
+/* Keep heading on top */
+
+.stats h2{
+font-size:36px;
+margin-bottom:50px;
+color:#92a332;
+display:block;
+width:100%;
+}
+
+/* Horizontal stats row */
+
+/* Statistics Section */
+
+.stats{
+padding:80px 10%;
+background:#172d13;
+color:white;
+text-align:center;
+
+/* force vertical layout */
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.stats h2{
+font-size:36px;
+margin-bottom:50px;
+color:#92a332;
+}
+
+/* horizontal stats row */
+
+.stats{
+padding:80px 10%;
+background:#172d13;
+color:white;
+text-align:center;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.stats h2{
+font-size:36px;
+margin:0;           /* remove default margin */
+color:#92a332;
+}
+
+.stats-container{
+display:flex;
+justify-content:center;
+gap:30px;
+width:100%;
+margin-top:15px;    /* small controlled gap */
+}
+
+.stat-box{
+background:#0f1f0d;
+padding:40px;
+border-radius:12px;
+transition:0.3s;
+box-shadow:0 8px 20px rgba(0,0,0,0.4);
+width:220px;
+text-align:center;
+}
+
+.stat-box:hover{
+transform:translateY(-10px);
+}
+
+.stat-box h3{
+font-size:40px;
+color:#6bb77b;
+margin-bottom:8px;
+}
+
+.stat-box p{
+font-size:16px;
+color:#dcdcdc;
+margin:0;
+}
+/* contact  */
+
 
 .contact-container{
 
