@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farmer Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css"/>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+<div class="logo">🚁 AgriDrone</div>
+
+<h2>Farmer Dashboard</h2>
+
+<div class="nav-right">
+<div class="notification">
+
+<span class="bell">Notifications 🔔 </span>
+<span class="badge">2</span>
+
+<div class="notification-box">
+
+<p> Booking BK1023 Confirmed</p>
+<p> Drone scan completed</p>
+
+</div>
+
+</div>
+</div>
+
+<span>Welcome, Ramesh</span>
+
+<button class="logout">Logout</button>
+
+</div>
+
+</header>
+
+
+<div class="dashboard">
+
+<!-- LEFT SIDE BOOKING FORM -->
+
+<div class="booking-card">
+
+<h3>Schedule a Drone Booking</h3>
+
+<label>Field Name / ID</label>
+<input type="text">
+
+<label>Crop Type</label>
+<select>
+<option>Paddy</option>
+<option>Cotton</option>
+<option>Chilli</option>
+</select>
+
+<label>Area (acres)</label>
+<input type="number">
+
+<label>Date</label>
+<input type="date">
+
+<label>Time Slot</label>
+<select>
+<option>Morning</option>
+<option>Afternoon</option>
+<option>Evening</option>
+</select>
+
+<button class="submit">Submit</button>
+
+</div>
+
+
+<!-- BOOKINGS TABLE -->
+
+<div class="booking-table">
+
+<h3>My Bookings</h3>
+
+<table>
+
+<thead>
+
+<tr>
+<th>Booking ID</th>
+<th>Field</th>
+<th>Crop</th>
+<th>Area</th>
+<th>Date</th>
+<th>Time</th>
+<th>Status</th>
+<th>Payment</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>BK1023</td>
+<td>Field A</td>
+<td>Paddy</td>
+<td>5 acres</td>
+<td>12-05-2024</td>
+<td>Morning</td>
+<td> <span class="confirmed">Confirmed</span></td>
+<td><button class="pay">Pay</button></td>
+</tr>
+
+<tr>
+<td>BK1026</td>
+<td>Field B</td>
+<td>Mirchi</td>
+<td>3 acres</td>
+<td>15-05-2024</td>
+<td>Afternoon</td>
+<td><span class="pending">Pending</span></td>
+<td>Cash on Service</td>
+</tr>
+
+<tr>
+<td>BK1030</td>
+<td>Field C</td>
+<td>Corn</td>
+<td>7 acres</td>
+<td>18-05-2024</td>
+<td>Evening</td>
+<td><span class="completed">Completed</span></td>
+<td class="paid">Paid</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+
+<!-- FIELD MAP -->
+
+<div class="map-card">
+
+<h3>My Field Map</h3>
+
+<div id="map"></div>
+
+</div>
+
+<!-- DRONE IMAGE GALLERY -->
+
+<div class="gallery">
+
+<h3>Drone Image Gallery</h3>
+
+<div class="images">
+
+<img src="https://picsum.photos/300?1">
+<img src="https://picsum.photos/300?2">
+<img src="https://picsum.photos/300?3">
+<img src="https://picsum.photos/300?4">
+
+</div>
+
+</div>
+
+</div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+</body>
+</html>
