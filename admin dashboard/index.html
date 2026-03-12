@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+<h2>🚁 AgriDrone Admin</h2>
+
+<div class="nav-right">
+
+<div class="notification">
+<span class="bell">Notifications 🔔 </span>
+<span class="badge">3</span>
+</div>
+
+<span>Admin</span>
+
+<button>Logout</button>
+
+</div>
+
+</header>
+
+
+<div class="container">
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<h2 class="menu-title">Menu</h2>
+
+<ul>
+
+<li><a href="#dashboard">Dashboard</a></li>
+
+<li><a href="#farmers">Farmers</a></li>
+
+<li><a href="#bookings">Bookings</a></li>
+
+<li><a href="#images">Drone Images</a></li>
+
+<li><a href="#payments">Payments</a></li>
+
+</ul>
+
+</div>
+
+
+<!-- MAIN CONTENT -->
+
+<main class="content">
+
+<!-- FARMERS TABLE -->
+
+<section id="farmers">
+
+<h3>Registered Farmers</h3>
+
+<table>
+
+<thead>
+
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Phone</th>
+<th>Village</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>F101</td>
+<td>Ramesh</td>
+<td>9876543210</td>
+<td>Palakollu</td>
+</tr>
+
+<tr>
+<td>F102</td>
+<td>Suresh</td>
+<td>9999999999</td>
+<td>Bhimavaram</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+
+<!-- BOOKINGS -->
+
+<section id="bookings">
+
+<h3>Drone Bookings</h3>
+
+<table>
+
+<thead>
+
+<tr>
+<th>ID</th>
+<th>Farmer</th>
+<th>Field</th>
+<th>Date</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>BK1023</td>
+<td>Ramesh</td>
+<td>Field A</td>
+<td>12-05-2024</td>
+<td class="pending">Pending</td>
+<td>
+
+<button class="approve">Approve</button>
+<button class="reject">Reject</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+
+<!-- IMAGE UPLOAD -->
+
+<section id="images">
+
+<h3>Drone Images</h3>
+
+<div id="drone-images"></div>
+
+</section>
+
+
+<!-- PAYMENTS -->
+
+<section id="payments">
+
+<h3>Payment Status</h3>
+
+<table>
+
+<tr>
+<th>Booking</th>
+<th>Farmer</th>
+<th>Amount</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>BK1023</td>
+<td>Ramesh</td>
+<td>₹2000</td>
+<td class="pending">Pending</td>
+</tr>
+
+<tr>
+<td>BK1025</td>
+<td>Suresh</td>
+<td>₹3500</td>
+<td class="paid">Paid</td>
+</tr>
+
+</table>
+
+</section>
+
+
+</main>
+
+</div>
+<script>
+function loadImages(){
+
+  fetch("http://localhost:4000/images")
+  .then(res => res.json())
+  .then(data => {
+
+    const container = document.getElementById("drone-images");
+
+    container.innerHTML = "";
+
+    data.forEach(img => {
+
+      const image = document.createElement("img");
+      image.src = img.image_url;
+
+      container.appendChild(image);
+
+    });
+
+  });
+
+}
+
+loadImages();
+setInterval(loadImages, 5000);
+</script>
+</body>
+
+</html>

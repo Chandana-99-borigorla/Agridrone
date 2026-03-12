@@ -1,0 +1,137 @@
+body{
+margin:0;
+font-family:Arial;
+background:#f4f6f8;
+}
+
+.navbar{
+background:#1e7f3e;
+color:white;
+display:flex;
+justify-content:space-between;
+padding:15px 25px;
+}
+
+.nav-right{
+display:flex;
+gap:15px;
+align-items:center;
+}
+
+.container{
+display:flex;
+}
+
+.container{
+display:flex;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+width:220px;
+background:#2c2c2c;
+color:white;
+height:100vh;
+padding-top:20px;
+position:sticky;
+top:0;
+}
+
+.menu-title{
+text-align:center;
+margin-bottom:20px;
+}
+
+.sidebar ul{
+list-style:none;
+padding:0;
+}
+
+.sidebar ul li{
+padding:15px 20px;
+border-bottom:1px solid #444;
+}
+
+.sidebar ul li a{
+color:white;
+text-decoration:none;
+display:block;
+}
+
+.sidebar ul li:hover{
+background:#3e3e3e;
+}
+
+/* MAIN CONTENT */
+.content{
+flex:1;
+padding:20px;
+}
+
+section{
+background:white;
+padding:20px;
+margin-bottom:20px;
+border-radius:8px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+table th, table td{
+border-bottom:1px solid #ddd;
+padding:10px;
+text-align:center;
+}
+
+.pending{
+color:#ff5722;
+font-weight:bold;
+}
+
+.paid{
+color:green;
+font-weight:bold;
+}
+
+button{
+padding:6px 10px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+.approve{
+background:#4caf50;
+color:white;
+}
+
+.reject{
+background:#e53935;
+color:white;
+}
+
+.badge{
+background:red;
+color:white;
+border-radius:50%;
+padding:2px 6px;
+font-size:12px;
+}
+html{
+scroll-behavior:smooth;
+}
+#drone-images{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#drone-images img{
+    width: 100%;
+    border-radius: 8px;
+}
